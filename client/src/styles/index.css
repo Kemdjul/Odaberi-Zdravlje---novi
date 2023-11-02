@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.page-container {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#programs-banner {
+  background-image: url('../assets/emisije-banner.jpg');
+}
+
+#kategorija-1 {
+  background-image: url('../assets/kategorije/oxygen.jpg');
+}
+
+#kategorija-2 {
+  background-image: url('../assets/kategorije/dodaci.jpg');
+}
+
+#kategorija-3 {
+  background-image: url('../assets/kategorije/cajevi.jpg');
+}
+
+#kategorija-4 {
+  background-image: url('../assets/kategorije/gelovi.jpg');
+}
+
+#vita-kartica {
+  background-image: url('../assets/vita-kartica.jpg');
+}
+
+#banner-universal {
+  background-image: url('../assets/banner/banner.jpg');
+}
+
+input[type="range"] {
+  -webkit-apperance: none;
+  appearance: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #ffffff;
+  height: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -4px;
+  height: 12px;
+  background-color: #23A455;
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+}

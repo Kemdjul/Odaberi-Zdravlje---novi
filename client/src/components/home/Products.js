@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { addToCart } from '../../store/cartSlice';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Products = ({ productList }) => {
     /* Category logic */
@@ -66,12 +66,14 @@ const Products = ({ productList }) => {
             {productList?.map((e, index) => {
                 if (e.category === category || category === 'akcija') return (
                     <div className="flex flex-col gap-2 items-center hover:text-zelena transition-all" key={index}>
-                        <img 
-                            src={require(`../../assets/${e.src}`)} 
-                            alt={e.alt} 
-                            className="border"
-                        />
-                        <h3 className="text-lg font-semibold tracking-widest">{e.name}</h3>
+                        <Link to={`/proizvodi/${e.tag}`} className="flex flex-col items-center">
+                            <img 
+                                src={require(`../../assets/${e.src}`)} 
+                                alt={e.alt} 
+                                className="border"
+                            />
+                            <h3 className="text-lg font-semibold tracking-widest">{e.name}</h3>
+                        </Link>
                         <p className="text-zelena">{e.price}€</p>
                         <button 
                             className="bg-zelena px-4 py-2 rounded-full text-white hover:text-[#DFDEDE] active:text-zelena active:bg-siva transition-all"
